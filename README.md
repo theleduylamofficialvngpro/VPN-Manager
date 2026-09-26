@@ -1,4 +1,4 @@
-# ⚡ VPN MANAGER - ULTIMATE EDITION
+# ⚡ PROTON VPN MANAGER - ULTIMATE EDITION
 
 An advanced Windows GUI application designed to manage WireGuard VPN tunnels, optimize ping latency for **Roblox**, and display real-time network traffic telemetry.
 
@@ -36,3 +36,40 @@ VPN-Manager/
 │   └── toggle_vpn.ps1    # PowerShell script to handle WireGuard service toggles
 ├── Makefile              # Build automation script for compiling C++ components via WSL/Linux
 └── README.md             # Project documentation
+🛠️ System Requirements & Installation
+1. Prerequisites
+Operating System: Windows 10 / 11[cite: 9]
+
+Python Version: Python 3.8+
+
+WireGuard Client: Installed on Windows (C:\Program Files\WireGuard\wireguard.exe)[cite: 9]
+
+2. Install Python Dependencies
+Install the required GUI library using pip:
+
+Bash
+pip install customtkinter
+🚀 Usage Instructions
+Add Server Configurations:
+
+Place your WireGuard .conf configuration files inside the bin/vps/ directory[cite: 9].
+
+Building the C++ DLL (Optional):
+
+If you want to recompile vpn_core.dll from source (src/vpn_core.cpp), run:
+
+Bash
+make
+Launch the Application:
+
+Open Terminal or Command Prompt as Administrator (required to modify Windows WireGuard services) and execute:
+
+Bash
+python src/main.py
+Operations:
+
+Select Server: Choose your preferred WireGuard configuration from the drop-down menu[cite: 9].
+
+TEST PING: Run latency diagnostics for Cloudflare and Roblox servers[cite: 9].
+
+CONNECT SERVER: Click to activate the VPN tunnel and start live traffic monitoring[cite: 9].
