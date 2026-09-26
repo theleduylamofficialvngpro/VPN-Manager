@@ -1,0 +1,4 @@
+Step 1: You need go to this: https://account.protonvpn.com/downloads and Log In Account.
+Step 2: Swoll down then find the WireGruad configuration
+Step 3: Create file conf any in server country and download.
+Step 4: download complete then put conf file to VPS Manager/bin/vps.
