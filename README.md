@@ -1,4 +1,4 @@
-# ⚡ PROTON VPN MANAGER - ULTIMATE EDITION
+# ⚡ VPN MANAGER - ULTIMATE EDITION
 
 An advanced Windows GUI application designed to manage WireGuard VPN tunnels, optimize ping latency for **Roblox**, and display real-time network traffic telemetry.
 
