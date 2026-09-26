@@ -77,7 +77,7 @@ class ModernVPNManager(ctk.CTk):
     def __init__(self):
         super().__init__()
 
-        self.title("PROTON VPN MANAGER - ULTIMATE EDITION")
+        self.title("VPN MANAGER - ULTIMATE EDITION")
         self.geometry("580x760")
         self.resizable(False, False)
         self.configure(fg_color="#090d16")
@@ -128,7 +128,7 @@ class ModernVPNManager(ctk.CTk):
         header_card.pack(fill="x", padx=20, pady=(20, 10))
 
         header_title = ctk.CTkLabel(
-            header_card, text="⚡ PROTON VPN CORE", 
+            header_card, text="⚡ VPN MANAGER CORE", 
             font=ctk.CTkFont(family="Segoe UI", size=20, weight="bold"), 
             text_color=self.COLOR_CYAN
         )
