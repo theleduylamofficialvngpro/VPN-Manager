@@ -1,0 +1,15 @@
+VPN-Manager/
+├── bin/                  # Compiled binaries (.dll) and config files
+│   ├── vpn_core.dll      # C++ latency engine library
+│   └── vps/              # Directory for WireGuard configuration files (.conf)
+├── build/                # Intermediate object files (.o) created during build
+├── include/              # C/C++ header files
+│   └── vpn_core.h        # Function definitions for the C++ core engine
+├── src/                  # Application source code
+│   ├── main.py           # Main Python GUI implementation
+│   └── vpn_core.cpp      # C++ source code for high-performance latency measurement
+├── scripts/              # System execution scripts
+│   ├── setup_vps.sh      # VPS deployment script for Linux/WSL
+│   └── toggle_vpn.ps1    # PowerShell script to handle WireGuard service toggles
+├── Makefile              # Build automation script for compiling C++ components via WSL/Linux
+└── README.md             # Project documentation

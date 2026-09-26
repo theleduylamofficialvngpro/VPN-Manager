@@ -1,0 +1,14 @@
+CXX = x86_64-w64-mingw32-g++
+CXXFLAGS = -O3 -shared -Iinclude
+SRC = src/vpn_core.cpp
+TARGET = bin/vpn_core.dll
+
+all: $(TARGET)
+
+$(TARGET): $(SRC)
+	@mkdir -p bin
+	$(CXX) $(SRC) $(CXXFLAGS) -o $(TARGET)
+	@echo "Build vpn_core.dll thanh cong!"
+
+clean:
+	rm -rf bin/*.dll build/*.o
