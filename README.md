@@ -1,15 +1,38 @@
-# Roblox Custom VPN Manager
+# ⚡ VPN MANAGER - ULTIMATE EDITION
 
-Dự án quản lý VPN riêng tối ưu Ping Roblox kết hợp giữa **VPS Private + Cloudflare WARP Outbound**.
+An advanced Windows GUI application designed to manage WireGuard VPN tunnels, optimize ping latency for **Roblox**, and display real-time network traffic telemetry.
 
-## Hướng dẫn từng bước trong VS Code:
+---
 
-1. **Tạo thư mục dự án và copy code:**
-   - Tạo folder `Roblox-VPN-Manager` trong VS Code.
-   - Tạo các folder con: `include`, `src`, `scripts`, `bin`, `build`.
-   - Copy mã nguồn tương ứng vào đúng tên file ở trên.
+## 🌟 Key Features
 
-2. **Cấu hình VPS bằng WSL Terminal:**
-   ```bash
-   scp scripts/setup_vps.sh root@<IP_VPS>:/root/
-   ssh root@<IP_VPS> "chmod +x setup_vps.sh && ./setup_vps.sh"
+* **Modern GUI Design:** Sleek Dark Mode interface built using `customtkinter`.
+* **C++ Core Engine Integration:** Calls `vpn_core.dll` via Python's `ctypes` for high-precision latency checks, with a built-in Python fallback mechanism.
+* **Automatic Server Discovery:** Automatically scans and retrieves WireGuard configuration files (`.conf`) placed inside `bin/vps/`.
+* **Roblox & Cloudflare Ping Test:** Detects active Roblox application/web processes to measure accurate latency against Roblox servers (`128.116.119.3`) and Cloudflare DNS (`1.1.1.1`).
+* **Real-time Traffic Telemetry:**
+  * Displays live Download and Upload speeds in KB/s.
+  * Interactive real-time network bandwidth graph.
+  * Extracts transfer statistics directly via `wireguard.exe`.
+* **Administrative Tunnel Control:** Integrates with PowerShell scripts running under Administrator privileges (`runas`) to start/stop WireGuard services[cite: 9].
+
+---
+
+## 📁 Repository Structure
+
+```text
+VPN-Manager/
+├── bin/                  # Compiled binaries (.dll) and config files
+│   ├── vpn_core.dll      # C++ latency engine library
+│   └── vps/              # Directory for WireGuard configuration files (.conf)
+├── build/                # Intermediate object files (.o) created during build
+├── include/              # C/C++ header files
+│   └── vpn_core.h        # Function definitions for the C++ core engine
+├── src/                  # Application source code
+│   ├── main.py           # Main Python GUI implementation
+│   └── vpn_core.cpp      # C++ source code for high-performance latency measurement
+├── scripts/              # System execution scripts
+│   ├── setup_vps.sh      # VPS deployment script for Linux/WSL
+│   └── toggle_vpn.ps1    # PowerShell script to handle WireGuard service toggles
+├── Makefile              # Build automation script for compiling C++ components via WSL/Linux
+└── README.md             # Project documentation
