@@ -1,4 +1,4 @@
-# ⚡ VPN MANAGER - ULTIMATE EDITION
+# ⚡ PROTON VPN MANAGER - ULTIMATE EDITION
 
 An advanced Windows GUI application designed to manage WireGuard VPN tunnels, optimize ping latency for **Roblox**, and display real-time network traffic telemetry.
 
@@ -7,6 +7,7 @@ An advanced Windows GUI application designed to manage WireGuard VPN tunnels, op
 ## 🌟 Key Features
 
 * **Modern GUI Design:** Sleek Dark Mode interface built using `customtkinter`.
+* **Custom App Branding:** Integrated custom application icon (`vpn_lock_global.ico`) for windows and taskbar display.
 * **C++ Core Engine Integration:** Calls `vpn_core.dll` via Python's `ctypes` for high-precision latency checks, with a built-in Python fallback mechanism.
 * **Automatic Server Discovery:** Automatically scans and retrieves WireGuard configuration files (`.conf`) placed inside `bin/vps/`.
 * **Roblox & Cloudflare Ping Test:** Detects active Roblox application/web processes to measure accurate latency against Roblox servers (`128.116.119.3`) and Cloudflare DNS (`1.1.1.1`).
@@ -22,7 +23,9 @@ An advanced Windows GUI application designed to manage WireGuard VPN tunnels, op
 
 ```text
 VPN-Manager/
-├── bin/                  # Compiled binaries (.dll) and config files
+├── bin/                  # Compiled binaries (.dll), config files, and UI assets
+│   ├── assets/           # Application icons and graphic assets
+│   │   └── vpn_lock_global.ico
 │   ├── vpn_core.dll      # C++ latency engine library
 │   └── vps/              # Directory for WireGuard configuration files (.conf)
 ├── build/                # Intermediate object files (.o) created during build
@@ -60,8 +63,9 @@ pip install customtkinter
 
 ## 🚀 Usage Instructions
 
-1. **Add Server Configurations:**
+1. **Add Server Configurations & Assets:**
    * Place your WireGuard `.conf` configuration files inside the `bin/vps/` directory.
+   * Ensure `vpn_lock_global.ico` is placed inside the `bin/assets/` directory.
 2. **Building the C++ DLL (Optional):**
    * If you want to recompile `vpn_core.dll` from source (`src/vpn_core.cpp`), run:
      ```bash
